@@ -17,7 +17,7 @@ function WriteData(data) {
     }
 };
 
-
+//Read selected file and send call function SendData to send data to the websocket
 const Input = document.querySelector("#Input");
 
 Input.addEventListener("change", () => {
