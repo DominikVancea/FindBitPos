@@ -1,6 +1,6 @@
 function SendData(data) {
-    var Conn = new WebSocket('ws://localhost:5001');
-    Conn.onmessage = function(e){ WriteData(e.data); };
+    var Conn = new WebSocket('ws://localhost:5001')
+    Conn.onmessage = function(e){ WriteData(e.data) }
     Conn.onopen = () => Conn.send(data)
 };
 
@@ -21,11 +21,11 @@ function WriteData(data) {
 const Input = document.querySelector("#Input");
 
 Input.addEventListener("change", () => {
-    const File = Input.files.item(0);
+    const File = Input.files.item(0)
 
-    const Reader = new FileReader();
-    Reader.readAsText(File);
+    const Reader = new FileReader()
+    Reader.readAsText(File)
     Reader.onload = () => {
-        SendData(Reader.result);
-    };
-});
+        SendData(Reader.result)
+    }
+})
