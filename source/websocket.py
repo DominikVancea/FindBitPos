@@ -29,7 +29,7 @@ async def Socket(websocket, path):
 
     #Process Output from c Program
     if LineOutput == "":
-        SendData["Error"] = "No set Bit found"
+        SendData["Error"] = "No set bit found"
     else:
 
         #Seperate c program output in bit and byte position
