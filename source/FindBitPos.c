@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 
+
 int ConvertToBit(char Input)
 {
     char Output[32];
