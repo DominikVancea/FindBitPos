@@ -15,7 +15,7 @@ async def Socket(websocket, path):
     #Get random 5 digit number for filename
     FileName = ("temp/" + str(randint(10000, 99999)) + ".bin")
 
-    #Create directory "temp" when not avaible
+    #Create directory "temp" when not available
     try:
         File = open(FileName, "w")
     except FileNotFoundError:
@@ -27,12 +27,12 @@ async def Socket(websocket, path):
 
     LineOutput = os.popen("./FindBitPos " + FileName).read()
 
-    #Process Output from c Programm
+    #Process Output from c Program
     if LineOutput == "":
         SendData["Error"] = "No set Bit found"
     else:
 
-        #Seperate bit position and byte position
+        #Seperate c program output in bit and byte position
         for i in range(0, len(LineOutput)):
 
             if LineOutput[i] == ":":
