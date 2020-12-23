@@ -5,7 +5,7 @@
 
 int ConvertToBit(char Input)
 {
-    char Output[32];
+    char Output[8];
     int BitPos = 0;
     
     for (int Index = 7; Index >= 0; Index--)
